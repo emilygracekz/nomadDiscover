@@ -11,7 +11,7 @@ html {
 }
 
 .main-nav {
-  float: right;
+  float: left;
   list-style: none;
   margin-top: 30px;
 }
@@ -34,94 +34,63 @@ html {
 /* background */
 .bg {
   background-image: url("pawel-nolbert-wE_Dk2Kd3GQ-unsplash.jpg");
+  background-color: salmon;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* text on page */
-/* .caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: left;
-  float: left;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font: 20px "Libre Baskerville", serif;
-  color: white;
-  font-weight: bold;
-} */
 
-/* form background */
-
-/* .form {
-  background-color: white;
-} */
-
-/* buttons */
+/* form */
+.start {
+  text-align: center;
+}
 
 .btn {
-  border: 1px solid white;
-  padding: 10px 30px;
+  border: solid 1px white;
+  padding: 10px 70px;
   color: white;
+  background-color: transparent;
   text-decoration: none;
-  margin-top: 30px;
+  margin-top: 0px;
   margin-right: 5px;
   clear: both;
   font-size: 13px;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
+  border-radius: 12px;
+  width: 50px; 
+  height: 5em;
+
 }
 
 .btn:hover {
   background-color: grey;
 }
 
-/* .go {
-  border: 1px solid grey;
-  padding: 10px 30px;
-  color: grey;
-  text-decoration: none;
-  margin-top: 30px;
-  margin-right: 5px;
-  font-size: 13px;
-}
-
-.go:hover {
-  background-color: darkgrey;
-} */
-
-/* form section */
-/* .form {
-  font: 20px "Open Sans", sans-serif;
-  color: black;
-  text-align: center;
-} */
-
 input.search {
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
   outline: 0;
-  border: 10px solid darksalmon;
-  color: whitesmoke;
-  width: 50%;
-  position: relative;
+  background-color: transparent;
+  color: black;
+  width: 20%; 
   top: 10px;
-  z-index: 2;
-  border-radius: 5px;
   font-size: 20px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+  border-radius: 12px;
+  padding: 1em;
+  position:relative;
+  width: 740px;
 }
 
 /* footer */
 #footer {
-background-color: #152238;
+background-color: #8B848B;
 position: relative;
-height: 100px;
-margin-top: -100px;
+height: 50px;
+margin-top: -50px;
 color: white;
 font: 15px "Libre Baskerville", serif;
 text-align: center;
+letter-spacing: 1.5px;
 }
