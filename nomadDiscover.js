@@ -346,7 +346,7 @@ const options = [
     continent: "Asia",
     country: "Laos",
     city: "Luang Prabang",
-    weather: "Hot",
+    weather: "Warm",
     budget: 1300,
     size: "Small"
   },
@@ -355,7 +355,7 @@ const options = [
     continent: "South America",
     country: "Chile",
     city: "Santiago",
-    weather: "Hot",
+    weather: "Warm",
     budget: 1400,
     size: "Big"
   },
@@ -391,7 +391,7 @@ const options = [
     continent: "Asia",
     country: "Cambodia",
     city: "Phnom Penh",
-    weather: "Hot",
+    weather: "Warm",
     budget: 1200,
     size: "Big"
   },
@@ -400,7 +400,7 @@ const options = [
     continent: "Africa",
     country: "Tunisia",
     city: "Phnom Penh",
-    weather: "Hot",
+    weather: "Warm",
     budget: 1000,
     size: "Big"
   },
@@ -409,7 +409,7 @@ const options = [
     continent: "Asia",
     country: "Cambodia",
     city: "Siem Reap",
-    weather: "Hot",
+    weather: "Warm",
     budget: 1000,
     size: "Mid"
   },
@@ -427,7 +427,7 @@ const options = [
     continent: "South America",
     country: "Uruguay",
     city: "Montevideo",
-    weather: "Hot",
+    weather: "Warm",
     budget: 1700,
     size: "Big"
   },
@@ -436,7 +436,7 @@ const options = [
     continent: "Asia",
     country: "Vietnam",
     city: "Hanoi",
-    weather: "Hot",
+    weather: "Warm",
     budget: 1000,
     size: "Big"
   },
@@ -457,7 +457,7 @@ const options = [
     weather: "Mild",
     budget: 1100,
     size: "Big"
-  }
+  },
   //La Paz
   {
     continent: "North America",
@@ -574,22 +574,63 @@ const options = [
     weather: "Cold",
     budget: 1100,
     size: "Mid"
-  },
+  }
 ];
 
-//continent, weather, budget, size
+//LOCATION FUNCTION
+// grab user input
+document.querySelector("form").addEventListener("submit", function location (e) {
+  e.preventDefault();
 
-const userInput = { weather: "cold", budget: 1500 };
+  //store list of matching cities in a variable
+  let finalList = matchInput();
 
-//find matches and put that mf into variables
-const continentFilter = options => options.continent === userInput.continent;
-const weatherFilter = options => options.weather === userInput.weather;
-const budgetFilter = options => userInput.budget <= options.budget;
-const sizeFilter = options => userInput.budget === options.size;
+  //pick a random city from the list
+  let randomPlace = finalList[Math.floor(Math.random() * finalList.length)];
+  console.log(randomPlace);
 
-//💁FILTERRRR💁
-console.log(options.filter(continentFilter).filter(weatherFilter).filter(budgetFilter).filter(sizeFilter));
+  //open new window
+  window.open("nomadDiscover2.html");
+
+  document.querySelector("results").innerHTML = randomPlace;
+});
 
 
-//press go
-const start = document.querySelector("letgo");
+
+//MATCH INPUT FUNCTION
+//filter user inputs with options
+function matchInput() {
+  let inputContinent = document.querySelector("#continent").value;
+  let inputBudget = document.querySelector("#budget").value;
+  let inputWeather = document.querySelector("#weather").value;
+  let inputSize = document.querySelector("#size").value;
+
+  //continent filter
+  const continentFilter = entry => {
+    return entry.continent === inputContinent;
+  };
+  const continentsFiltered = options.filter(continentFilter);
+  // console.log(continentsFiltered);
+
+  //budget filter
+  const budgetFilter = select => {
+    return select.budget <= inputBudget;
+  };
+  const budgetFiltered = continentsFiltered.filter(budgetFilter);
+  // console.log(budgetFiltered);
+
+  //weather filter
+  const weatherFilter = pick => {
+    return pick.weather === inputWeather;
+  };
+  const weatherFiltered = budgetFiltered.filter(weatherFilter);
+  // console.log(weatherFiltered);
+
+  //size filter
+  const sizeFilter = you => {
+    return you.size === inputSize;
+  };
+  const sizeFiltered = weatherFiltered.filter(sizeFilter);
+  // console.log(sizeFiltered);
+  return sizeFiltered;
+} //end of matchInputFunction
