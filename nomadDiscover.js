@@ -1,3 +1,7 @@
+const asiaWeather = "Hot";
+const europeWeather = "Cold";
+const southAmericaWeather = "Hot";
+
 const options = [
   //Tenerife
   {
@@ -40,7 +44,7 @@ const options = [
     continent: "Europe",
     country: "Lithuania",
     city: "Vilnius",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 1900,
     size: "XX"
   },
@@ -58,7 +62,7 @@ const options = [
     continent: "Europe",
     country: "Hungary",
     city: "Budapest",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 1500,
     size: "XX"
   },
@@ -67,7 +71,7 @@ const options = [
     continent: "Europe",
     country: "Bulgaria",
     city: "Sofia",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 1200,
     size: "Big"
   },
@@ -76,7 +80,7 @@ const options = [
     continent: "Europe",
     country: "Germany",
     city: "Berlin",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 2800,
     size: "Big"
   },
@@ -85,7 +89,7 @@ const options = [
     continent: "Europe",
     country: "Croatia",
     city: "Zagreb",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 1800,
     size: "Mid"
   },
@@ -94,7 +98,7 @@ const options = [
     continent: "South America",
     country: "Argentina",
     city: "Buenos Aires",
-    weather: "Warm",
+    weather: southAmericaWeather,
     budget: 1000,
     size: "Big"
   },
@@ -103,7 +107,7 @@ const options = [
     continent: "Asia",
     country: "Thailand",
     city: "Ko Samui",
-    weather: "Warm",
+    weather: southAmericaWeather,
     budget: 1400,
     size: "Small"
   },
@@ -121,7 +125,7 @@ const options = [
     continent: "South America",
     country: "Colombia",
     city: "Medellín",
-    weather: "Warm",
+    weather: southAmericaWeather,
     budget: 1000,
     size: "Big"
   },
@@ -130,7 +134,7 @@ const options = [
     continent: "Asia",
     country: "Indonesia",
     city: "Canggu, Bali",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1400,
     size: "Small"
   },
@@ -139,7 +143,7 @@ const options = [
     continent: "South America",
     country: "Brazil",
     city: "São Paulo",
-    weather: "Warm",
+    weather: southAmericaWeather,
     budget: 1600,
     size: "Big"
   },
@@ -148,7 +152,7 @@ const options = [
     continent: "Asia",
     country: "Thailand",
     city: "Bangkok",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1500,
     size: "Big"
   },
@@ -157,7 +161,7 @@ const options = [
     continent: "Asia",
     country: "Indonesia",
     city: "Chaing Mai",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1100,
     size: "Mid"
   },
@@ -166,7 +170,7 @@ const options = [
     continent: "Asia",
     country: "Vietnam",
     city: "Da Nang",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1000,
     size: "Big"
   },
@@ -175,7 +179,7 @@ const options = [
     continent: "Europe",
     country: "Georgia",
     city: "Tbilisi",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 1300,
     size: "Big"
   },
@@ -184,7 +188,7 @@ const options = [
     continent: "Asia",
     country: "Thailand",
     city: "Phuket",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1700,
     size: "Mid"
   },
@@ -193,7 +197,7 @@ const options = [
     continent: "Europe",
     country: "Czechia",
     city: "Prague",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 2000,
     size: "Big"
   },
@@ -202,7 +206,7 @@ const options = [
     continent: "Europe",
     country: "Turkey",
     city: "Istanbul",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 1300,
     size: "Big"
   },
@@ -220,7 +224,7 @@ const options = [
     continent: "North America",
     country: "Mexico",
     city: "Playa del Carmen",
-    weather: "Warm",
+    weather: southAmericaWeather,
     budget: 1500,
     size: "Mid"
   },
@@ -229,7 +233,7 @@ const options = [
     continent: "Asia",
     country: "Taiwan",
     city: "Taipei",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 2000,
     size: "Big"
   },
@@ -238,7 +242,7 @@ const options = [
     continent: "Europe",
     country: "Ukrane",
     city: "Kiev",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 1800,
     size: "Big"
   },
@@ -247,7 +251,7 @@ const options = [
     continent: "Europe",
     country: "Romania",
     city: "Bucharest",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 1500,
     size: "Big"
   },
@@ -256,7 +260,7 @@ const options = [
     continent: "Europe",
     country: "Serbia",
     city: "Belgrade",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 1400,
     size: "Big"
   },
@@ -265,7 +269,7 @@ const options = [
     continent: "Asia",
     country: "Thailand",
     city: "Ko Tao",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1500,
     size: "Small"
   },
@@ -274,7 +278,7 @@ const options = [
     continent: "Europe",
     country: "Russia",
     city: "Saint Petersburg",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 1600,
     size: "Big"
   },
@@ -283,7 +287,7 @@ const options = [
     continent: "Europe",
     country: "Ukraine",
     city: "Odessa",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 1200,
     size: "Mid"
   },
@@ -292,7 +296,7 @@ const options = [
     continent: "Europe",
     country: "Cuba",
     city: "Havana",
-    weather: "Warm",
+    weather: southAmericaWeather,
     budget: 1600,
     size: "Big"
   },
@@ -301,7 +305,7 @@ const options = [
     continent: "Asia",
     country: "Indonesia",
     city: "Ubud, Bali",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1800,
     size: "Mid"
   },
@@ -310,7 +314,7 @@ const options = [
     continent: "Europe",
     country: "Russia",
     city: "Moscow",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 2300,
     size: "Big"
   },
@@ -346,7 +350,7 @@ const options = [
     continent: "Asia",
     country: "Laos",
     city: "Luang Prabang",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1300,
     size: "Small"
   },
@@ -355,7 +359,7 @@ const options = [
     continent: "South America",
     country: "Chile",
     city: "Santiago",
-    weather: "Warm",
+    weather: southAmericaWeather,
     budget: 1400,
     size: "Big"
   },
@@ -364,7 +368,7 @@ const options = [
     continent: "Asia",
     country: "Vietnam",
     city: "Da Lat",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1000,
     size: "Mid"
   },
@@ -391,7 +395,7 @@ const options = [
     continent: "Asia",
     country: "Cambodia",
     city: "Phnom Penh",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1200,
     size: "Big"
   },
@@ -409,7 +413,7 @@ const options = [
     continent: "Asia",
     country: "Cambodia",
     city: "Siem Reap",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1000,
     size: "Mid"
   },
@@ -418,7 +422,7 @@ const options = [
     continent: "Europe",
     country: "Romania",
     city: "Mamaia",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 1400,
     size: "Mid"
   },
@@ -427,7 +431,7 @@ const options = [
     continent: "South America",
     country: "Uruguay",
     city: "Montevideo",
-    weather: "Warm",
+    weather: southAmericaWeather,
     budget: 1700,
     size: "Big"
   },
@@ -436,7 +440,7 @@ const options = [
     continent: "Asia",
     country: "Vietnam",
     city: "Hanoi",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1000,
     size: "Big"
   },
@@ -445,7 +449,7 @@ const options = [
     continent: "Europe",
     country: "Estonia",
     city: "Tallinn",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 2000,
     size: "Mid"
   },
@@ -463,7 +467,7 @@ const options = [
     continent: "North America",
     country: "Mexico",
     city: "La Paz",
-    weather: "Warm",
+    weather: southAmericaWeather,
     budget: 1000,
     size: "Big"
   },
@@ -472,7 +476,7 @@ const options = [
     continent: "Asia",
     country: "Maldives",
     city: "Male",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 2000,
     size: "Mid"
   },
@@ -481,7 +485,7 @@ const options = [
     continent: "Asia",
     country: "Philippines",
     city: "Cebu",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1400,
     size: "Mid"
   },
@@ -490,7 +494,7 @@ const options = [
     continent: "Asia",
     country: "Philippines",
     city: "Palawan",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1400,
     size: "Mid"
   },
@@ -517,7 +521,7 @@ const options = [
     continent: "Europe",
     country: "Estonia",
     city: "Tallinn",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 2000,
     size: "Mid"
   },
@@ -535,7 +539,7 @@ const options = [
     continent: "Europe",
     country: "Poland",
     city: "Warsaw",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 1900,
     size: "Big"
   },
@@ -544,7 +548,7 @@ const options = [
     continent: "Asia",
     country: "Philippines",
     city: "Makati",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1800,
     size: "Mid"
   },
@@ -553,7 +557,7 @@ const options = [
     continent: "Asia",
     country: "Thailand",
     city: "Koh Lanta",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1500,
     size: "Small"
   },
@@ -562,7 +566,7 @@ const options = [
     continent: "Europe",
     country: "Poland",
     city: "Kraków",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 1500,
     size: "Mid"
   },
@@ -571,15 +575,19 @@ const options = [
     continent: "Europe",
     country: "Ukraine",
     city: "Lviv",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 1100,
     size: "Mid"
   }
 ];
 
+const cardButtons = document.querySelectorAll(".card button");
+const modalOuter = document.querySelector(".modal-outer");
+const modalInner = document.querySelector(".modal-inner");
+
 //LOCATION FUNCTION
 // grab user input
-document.querySelector("form").addEventListener("submit", function location (e) {
+document.querySelector("form").addEventListener("submit", function location(e) {
   e.preventDefault();
 
   //store list of matching cities in a variable
@@ -587,15 +595,8 @@ document.querySelector("form").addEventListener("submit", function location (e) 
 
   //pick a random city from the list
   let randomPlace = finalList[Math.floor(Math.random() * finalList.length)];
-  console.log(randomPlace);
-
-  //open new window
-  window.open("nomadDiscover2.html");
-
-  document.querySelector("results").innerHTML = randomPlace;
+  return randomPlace;
 });
-
-
 
 //MATCH INPUT FUNCTION
 //filter user inputs with options
@@ -634,3 +635,46 @@ function matchInput() {
   // console.log(sizeFiltered);
   return sizeFiltered;
 } //end of matchInputFunction
+
+
+
+//open to modal
+function handleCardButtonClick() {
+  const button = event.currentTarget;
+  const card = button.closest(".card");
+
+//grab image src
+const imgSrc = card.querySelector('img').src;
+const desc = card.dataset.description;
+const name = card.querySelector('h2').textContent;
+
+  //populate the modal with new info
+  modalInner.innerHTML = `<img src="${imgSrc.replace(
+    "200",
+    "600"
+  )}" alt="${name}"/>
+<p>${desc}</p>`;
+
+  //show modal
+  modalOuter.classList.add("open");
+}
+cardButtons.forEach(button =>
+  button.addEventListener("click", handleCardButtonClick)
+);
+
+function closeModal() {
+  modalOuter.classList.remove("open");
+}
+
+modalOuter.addEventListener("click", function(event) {
+  const isOutside = !event.target.closest(".modal-inner");
+  if (isOutside) {
+    modalOuter.classList.remove("open");
+  }
+});
+
+window.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    closeModal();
+  }
+});
