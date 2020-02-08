@@ -2,94 +2,93 @@
 <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
-
 <html>
+
 <head>
 
-<title>Nomad Discover</title>
+    <title>Nomad Discover</title>
 
-<link rel="stylesheet" type="text/css" href="nomadDiscover.css">
-<style>
-    .bg {background-image: url("pawel-nolbert-wE_Dk2Kd3GQ-unsplash.jpg");}
-</style>
+    <link rel="stylesheet" type="text/css" href="nomadDiscover.css">
+    <style>
+        .bg {
+            background-image: url("pawel-nolbert-wE_Dk2Kd3GQ-unsplash.jpg");
+        }
+    </style>
 </head>
 
 <body>
+    <!-- background styling -->
 
-    <!-- header -->
-    <section class="top">
-
-     <header>
-        <div class="row">
-        <ul class="main-nav">
-            <li><a href="">NOMAD DISCOVER</a></li>
-        </ul>
-        </div> 
-    </header> 
-    </section>
-    
-    <!-- form -->
-    <section class="start">
     <div class="bg">
 
- <!-- continent -->
-<form class="search-continent">
-    <input type="text" class="search" placeholder="Continent?" /></form>
+        <!-- header -->
+        <section class="top">
+            <ul class="main-nav">
+                <li><a href="">NOMAD DISCOVER</a></li>
+            </ul>
+        </section>
 
- <!-- input budget -->
- <form class="search-budget">
-    <input type="text" class="search" placeholder="Budget max?" /></form>
+        <!-- form -->
+        <section class="start">
+            <form class="drop-down">
+                <!-- continent -->
+                <select name="continent" id="continent">
+                    <option value="">Continent</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Africa">Africa</option>
+                    <!-- <option value="north-america">North America</option> -->
+                    <!--  <option value="south-america">South America</option> -->
+                    <option value="Europe">Europe</option>
+                    <option value="Australia">Australia</option>
+                </select>
 
-<!-- Weather -->
-<form class="weather">
-<input type="text" class="search" placeholder="Weather?" /></form>
+                <!-- budget -->
+                <select name="budget" id="budget">
+                    <option value="">Budget</option>
+                    <option value="1000">less than $1,000</option>
+                    <option value="1500">$1,500</option>
+                    <option value="2000">$2,000</option>
+                    <option value="2500">$2,500</option>
+                    <option value="3000">$3,000</option>
+                    <option value="3500">$3,500+</option>
+                </select>
 
-<!-- City size -->
-<form class="city-size">
-    <input type="text" class="search" placeholder="City size?" /></form>
-    
- <!-- lets go button -->
-<div class="letsgo">
-    <a href="" class="btn btn-one"> GO!</a>
+                <!-- weather -->
+                <select name="weather" id="weather">
+                    <option value="">Weather</option>
+                    <option value="Warm">Warm</option>
+                    <option value="Mild">Mild</option>
+                    <option value="Cold">Cold</option>
+                </select>
+
+                <!-- city size -->
+                <select name="size" id="size">
+                    <option value="">City size</option>
+                    <option value="Big">Big</option>
+                    <option value="Mid">Mid</option>
+                    <option value="Small">Small</option>
+                </select>
+
+                <!-- lets go button -->
+                <button type="submit" class="btn">GO!</button>
+            </form>
+        </section>
+        
+        <div class="modal-outer">
+            <div class="modal-inner">
+                <p id="youGo">
+                    You should go to...
+                </p>
+            </div>
+        </div>
+
+        <script src='nomadDiscover.js'></script>
+
+        <!-- footer -->
+        <!-- <footer id="footer">
+        <p>copyright 2020</p>
+    </footer> -->
     </div>
-    </div>
-</div>
-</section>
-
-<!-- form section -->
-<!-- <section class="form">
-<h2>Where to next?</h2>
-
-    input budget
-    <form class="search-budget">
-        <input type="text" class="search" placeholder="Budget max?" /></form>
-
-    continent
-    <form class="search-continent">
-        <input type="text" class="search" placeholder="Continent?" /></form>
-
-     Weather 
-    <form class="weather">
-    <input type="text" class="search" placeholder="Weather?" /></form>
-
-     Internet speed 
-    <form class="internet">
-        <input type="text" class="search" placeholder="Internet speed?" /></form>
-
-     City size
-    <form class="city-size">
-        <input type="text" class="search" placeholder="City size?" /></form>
-
-     buttons 
-    <button class="go" type="button">Let's go!</button>
-</section> -->
-
- <!-- <script></script> -->
-
-<!-- footer -->
-<footer id="footer">
-<p>copyright 2020</p>
-</footer>
-
 </body>
+
 </html>
