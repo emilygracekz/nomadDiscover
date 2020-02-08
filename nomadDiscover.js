@@ -1,6 +1,8 @@
-const asiaWeather = "Hot";
+const asiaWeather = "Warm";
+const southAmericaWeather = "Warm";
 const europeWeather = "Cold";
-const southAmericaWeather = "Hot";
+const northAmericaWeather = "Cold";
+const africaWeather = "Warm";
 
 const options = [
   //Tenerife
@@ -8,7 +10,7 @@ const options = [
     continent: "Europe",
     country: "Spain",
     city: "Tenerife, Canary Islands",
-    weather: "Warm",
+    weather: europeWeather,
     budget: 2100,
     size: "XX"
   },
@@ -17,7 +19,7 @@ const options = [
     continent: "Europe",
     country: "Spain",
     city: "Valencia",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 2250,
     size: "XX"
   },
@@ -26,7 +28,7 @@ const options = [
     continent: "Europe",
     country: "Spain",
     city: "Seville",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 2250,
     size: "XX"
   },
@@ -35,7 +37,7 @@ const options = [
     continent: "Europe",
     country: "Portugal",
     city: "Lisbon",
-    weather: "Warm",
+    weather: asiaWeather,
     budget: 1900,
     size: "XX"
   },
@@ -53,7 +55,7 @@ const options = [
     continent: "Europe",
     country: "Portugal",
     city: "Porto",
-    weather: "Warm",
+    weather: southAmericaWeather,
     budget: 1800,
     size: "XX"
   },
@@ -71,7 +73,7 @@ const options = [
     continent: "Europe",
     country: "Bulgaria",
     city: "Sofia",
-    weather: europeWeather,
+    weather: "Cold",
     budget: 1200,
     size: "Big"
   },
@@ -107,7 +109,7 @@ const options = [
     continent: "Asia",
     country: "Thailand",
     city: "Ko Samui",
-    weather: southAmericaWeather,
+    weather: asiaWeather,
     budget: 1400,
     size: "Small"
   },
@@ -116,7 +118,7 @@ const options = [
     continent: "South America",
     country: "Mexico",
     city: "Mexico City",
-    weather: "Warm",
+    weather: southAmericaWeather,
     budget: 1500,
     size: "Big"
   },
@@ -215,7 +217,7 @@ const options = [
     continent: "Africa",
     country: "South Africa",
     city: "Cape Town",
-    weather: "Warm",
+    weather: africaWeather,
     budget: 1800,
     size: "Mid"
   },
@@ -332,7 +334,7 @@ const options = [
     continent: "Africa",
     country: "Senegal",
     city: "Dakar",
-    weather: "Warm",
+    weather: africaWeather,
     budget: 1500,
     size: "Big"
   },
@@ -341,7 +343,7 @@ const options = [
     continent: "Europe",
     country: "Bulgaria",
     city: "Bansko",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 1300,
     size: "Small"
   },
@@ -503,7 +505,7 @@ const options = [
     continent: "Asia",
     country: "Turkey",
     city: "Izmir",
-    weather: "Cold",
+    weather: europeWeather,
     budget: 700,
     size: "Big"
   },
@@ -516,7 +518,7 @@ const options = [
     budget: 2500,
     size: "Mid"
   },
-
+  //Tallinn
   {
     continent: "Europe",
     country: "Estonia",
@@ -580,14 +582,13 @@ const options = [
     size: "Mid"
   }
 ];
-
-const cardButtons = document.querySelectorAll(".card button");
-const modalOuter = document.querySelector(".modal-outer");
-const modalInner = document.querySelector(".modal-inner");
+// const button = document.querySelector(".btn");
+// const modalOuter = document.querySelector(".modal-outer");
+// const modalInner = document.querySelector(".modal-inner");
 
 //LOCATION FUNCTION
 // grab user input
-document.querySelector("form").addEventListener("submit", function location(e) {
+document.querySelector("form").addEventListener("submit", function location (e) {
   e.preventDefault();
 
   //store list of matching cities in a variable
@@ -595,8 +596,14 @@ document.querySelector("form").addEventListener("submit", function location(e) {
 
   //pick a random city from the list
   let randomPlace = finalList[Math.floor(Math.random() * finalList.length)];
-  return randomPlace;
+  console.log(randomPlace);
+
+  //open new window
+  // window.open("nomadDiscover2.html");
+
+  // document.querySelector("results").innerHTML = randomPlace;
 });
+
 
 //MATCH INPUT FUNCTION
 //filter user inputs with options
@@ -611,54 +618,58 @@ function matchInput() {
     return entry.continent === inputContinent;
   };
   const continentsFiltered = options.filter(continentFilter);
-  // console.log(continentsFiltered);
+  console.log(continentsFiltered);
 
   //budget filter
   const budgetFilter = select => {
     return select.budget <= inputBudget;
   };
   const budgetFiltered = continentsFiltered.filter(budgetFilter);
-  // console.log(budgetFiltered);
+  console.log(budgetFiltered);
 
   //weather filter
   const weatherFilter = pick => {
     return pick.weather === inputWeather;
   };
+  console.log(weatherFilter);
   const weatherFiltered = budgetFiltered.filter(weatherFilter);
-  // console.log(weatherFiltered);
+  console.log(weatherFiltered);
 
-  //size filter
+  // size filter
   const sizeFilter = you => {
     return you.size === inputSize;
   };
   const sizeFiltered = weatherFiltered.filter(sizeFilter);
-  // console.log(sizeFiltered);
+  console.log(sizeFiltered);
   return sizeFiltered;
-} //end of matchInputFunction
+}; //end of matchInputFunction
 
+const button = document.querySelectorAll(".btn");
+const modalOuter = document.querySelector('.modal-outer');
+const modalInner = document.querySelector('.modal-inner');
 
-
-//open to modal
+//OPEN TO MODAL FUNCTION
 function handleCardButtonClick() {
-  const button = event.currentTarget;
-  const card = button.closest(".card");
+  button.currentTarget;
+ 
 
-//grab image src
-const imgSrc = card.querySelector('img').src;
-const desc = card.dataset.description;
-const name = card.querySelector('h2').textContent;
+// grab image src
+// const imgSrc = card.querySelector('img').src;
+// const desc = card.dataset.description;
+// const name = card.querySelector('h2').textContent;
 
-  //populate the modal with new info
-  modalInner.innerHTML = `<img src="${imgSrc.replace(
-    "200",
-    "600"
-  )}" alt="${name}"/>
-<p>${desc}</p>`;
+  // populate the modal with new info
+  // modalInner.innerHTML = `<img src="${imgSrc.replace(
+  //   "200",
+  //   "600"
+  // )}" alt="${name}"/>
+{/* <p>You should go to...</p>`); */}
 
   //show modal
   modalOuter.classList.add("open");
 }
-cardButtons.forEach(button =>
+
+button.forEach(button =>
   button.addEventListener("click", handleCardButtonClick)
 );
 
@@ -678,3 +689,4 @@ window.addEventListener("keydown", event => {
     closeModal();
   }
 });
+//end of modal function
