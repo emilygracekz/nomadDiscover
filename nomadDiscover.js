@@ -582,31 +582,11 @@ const options = [
     size: "Mid"
   }
 ];
-// const button = document.querySelector(".btn");
-// const modalOuter = document.querySelector(".modal-outer");
-// const modalInner = document.querySelector(".modal-inner");
 
-//LOCATION FUNCTION
-// grab user input
-document.querySelector("form").addEventListener("submit", function location (e) {
-  e.preventDefault();
+//grab modal parts
+const modalOuter = document.querySelector(".modal-outer");
+const modalInner = document.querySelector(".modal-inner");
 
-  //store list of matching cities in a variable
-  let finalList = matchInput();
-
-  //pick a random city from the list
-  let randomPlace = finalList[Math.floor(Math.random() * finalList.length)];
-  console.log(randomPlace);
-
-  //open new window
-  // window.open("nomadDiscover2.html");
-
-  // document.querySelector("results").innerHTML = randomPlace;
-});
-
-
-//MATCH INPUT FUNCTION
-//filter user inputs with options
 function matchInput() {
   let inputContinent = document.querySelector("#continent").value;
   let inputBudget = document.querySelector("#budget").value;
@@ -642,51 +622,64 @@ function matchInput() {
   const sizeFiltered = weatherFiltered.filter(sizeFilter);
   console.log(sizeFiltered);
   return sizeFiltered;
-}; //end of matchInputFunction
-
-const button = document.querySelectorAll(".btn");
-const modalOuter = document.querySelector('.modal-outer');
-const modalInner = document.querySelector('.modal-inner');
+} //end of matchInputFunction
 
 //OPEN TO MODAL FUNCTION
-function handleCardButtonClick() {
-  button.currentTarget;
- 
+function handleSubmitClick() {
+  // grab image src
+  // const imgSrc = card.querySelector('img').src;
+  // const desc = card.dataset.description;
+  // const name = card.querySelector('h2').textContent;
 
-// grab image src
-// const imgSrc = card.querySelector('img').src;
-// const desc = card.dataset.description;
-// const name = card.querySelector('h2').textContent;
-
-  // populate the modal with new info
-  // modalInner.innerHTML = `<img src="${imgSrc.replace(
-  //   "200",
-  //   "600"
-  // )}" alt="${name}"/>
-{/* <p>You should go to...</p>`); */}
+  //populate the modal with new info
+  // modalInner.insertAdjacentHTML("afterbegin", 
+  // "<p>${}</p>"
+  // );
 
   //show modal
-  modalOuter.classList.add("open");
-}
+   modalOuter.classList.add("open");
 
-button.forEach(button =>
-  button.addEventListener("click", handleCardButtonClick)
-);
-
-function closeModal() {
-  modalOuter.classList.remove("open");
-}
-
-modalOuter.addEventListener("click", function(event) {
-  const isOutside = !event.target.closest(".modal-inner");
-  if (isOutside) {
+  function closeModal() {
     modalOuter.classList.remove("open");
   }
-});
+  
+  modalOuter.addEventListener("click", function(event) {
+    const isOutside = !event.target.closest(".modal-inner");
+    if (isOutside) {
+      modalOuter.classList.remove("open");
+    }
+  });
+  
+  window.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+  //end of modal function  
+}
 
-window.addEventListener("keydown", event => {
-  if (event.key === "Escape") {
-    closeModal();
-  }
-});
-//end of modal function
+function onSubmit(e) {
+  e.preventDefault();
+  let finalList = matchInput();
+  //reset the form
+  e.target.reset();
+
+  //pick a random city from the list
+  let randomPlace = finalList[Math.floor(Math.random() * finalList.length)];
+  JSON.stringify(randomPlace);
+  console.log(randomPlace);
+  handleSubmitClick();
+  
+  //populate the modal with new info
+  modalInner.insertAdjacentHTML('afterend', `<p> 
+  You should go to 
+  ${randomPlace.city} in ${randomPlace.country}, ${randomPlace.continent}! 
+  Check it out on NomadList: here
+  </p>`
+  );
+
+}
+
+document.querySelector("form").addEventListener("submit", onSubmit);
+
+
