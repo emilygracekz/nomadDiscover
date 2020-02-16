@@ -4,6 +4,16 @@ const europeWeather = "Cold";
 const northAmericaWeather = "Cold";
 const africaWeather = "Warm";
 
+//TODO: ask about URLs
+//TODO: move database to new file
+//TODO: add photos
+//TODO: fix north america and south america options
+//TODO: fix how the result displays on the modal
+//TODO: add any option, i.e. any continent, any size
+//TODO: add breaks: no input, no matches
+//TODO: Add about section
+//TODO: Add footer with github link and copyright
+
 const options = [
   //Tenerife
   {
@@ -12,7 +22,9 @@ const options = [
     city: "Tenerife, Canary Islands",
     weather: europeWeather,
     budget: 2100,
-    size: "XX"
+    size: "Mid",
+    // url: new URL(shorturl.at/cemnU),
+    // photo: xx;
   },
   //Valencia
   {
@@ -21,7 +33,7 @@ const options = [
     city: "Valencia",
     weather: asiaWeather,
     budget: 2250,
-    size: "XX"
+    size: "Big"
   },
   //Seville
   {
@@ -30,7 +42,7 @@ const options = [
     city: "Seville",
     weather: asiaWeather,
     budget: 2250,
-    size: "XX"
+    size: "Big"
   },
   //Lisbon
   {
@@ -39,7 +51,7 @@ const options = [
     city: "Lisbon",
     weather: asiaWeather,
     budget: 1900,
-    size: "XX"
+    size: "Mid"
   },
   //Vilnius
   {
@@ -48,7 +60,7 @@ const options = [
     city: "Vilnius",
     weather: europeWeather,
     budget: 1900,
-    size: "XX"
+    size: "Mid"
   },
   //Porto
   {
@@ -57,7 +69,7 @@ const options = [
     city: "Porto",
     weather: southAmericaWeather,
     budget: 1800,
-    size: "XX"
+    size: "Mid"
   },
   //Budapest
   {
@@ -66,7 +78,7 @@ const options = [
     city: "Budapest",
     weather: europeWeather,
     budget: 1500,
-    size: "XX"
+    size: "Big"
   },
   //Sofia
   {
@@ -221,7 +233,7 @@ const options = [
     budget: 1800,
     size: "Mid"
   },
-  //Playa del Carmel
+  //Playa del Carmen
   {
     continent: "North America",
     country: "Mexico",
@@ -405,7 +417,7 @@ const options = [
   {
     continent: "Africa",
     country: "Tunisia",
-    city: "Phnom Penh",
+    city: "Tunis",
     weather: "Warm",
     budget: 1000,
     size: "Big"
@@ -583,10 +595,6 @@ const options = [
   }
 ];
 
-//grab modal parts
-const modalOuter = document.querySelector(".modal-outer");
-const modalInner = document.querySelector(".modal-inner");
-
 function matchInput() {
   let inputContinent = document.querySelector("#continent").value;
   let inputBudget = document.querySelector("#budget").value;
@@ -624,21 +632,30 @@ function matchInput() {
   return sizeFiltered;
 } //end of matchInputFunction
 
-//OPEN TO MODAL FUNCTION
-function handleSubmitClick() {
-  // grab image src
-  // const imgSrc = card.querySelector('img').src;
-  // const desc = card.dataset.description;
-  // const name = card.querySelector('h2').textContent;
+//grab modal parts
+const modalOuter = document.querySelector(".modal-outer");
+const modalInner = document.querySelector(".modal-inner");
+
+//handle the submission, populate modal
+function onSubmit(e) {
+  e.preventDefault();
+  let finalList = matchInput();
+
+  //reset the form
+  e.target.reset();
+
+  //pick a random city from the list
+  let randomPlace = finalList[Math.floor(Math.random() * finalList.length)];
+  JSON.stringify(randomPlace);
+  console.log(randomPlace);
 
   //populate the modal with new info
-  // modalInner.insertAdjacentHTML("afterbegin", 
-  // "<p>${}</p>"
-  // );
+  modalInner.innerHTML = `<p>You should go to ${randomPlace.city}, ${randomPlace.country}!</p>`;
 
   //show modal
-   modalOuter.classList.add("open");
+  modalOuter.classList.add("open");
 
+  //close the model when clicked out or esc is pressed
   function closeModal() {
     modalOuter.classList.remove("open");
   }
@@ -655,29 +672,7 @@ function handleSubmitClick() {
       closeModal();
     }
   });
-  //end of modal function  
-}
-
-function onSubmit(e) {
-  e.preventDefault();
-  let finalList = matchInput();
-  //reset the form
-  e.target.reset();
-
-  //pick a random city from the list
-  let randomPlace = finalList[Math.floor(Math.random() * finalList.length)];
-  JSON.stringify(randomPlace);
-  console.log(randomPlace);
-  handleSubmitClick();
-  
-  //populate the modal with new info
-  modalInner.insertAdjacentHTML('afterend', `<p> 
-  You should go to 
-  ${randomPlace.city} in ${randomPlace.country}, ${randomPlace.continent}! 
-  Check it out on NomadList: here
-  </p>`
-  );
-
+  //end of modals 
 }
 
 document.querySelector("form").addEventListener("submit", onSubmit);
