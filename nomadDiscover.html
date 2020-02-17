@@ -7,7 +7,7 @@
 <head>
 
     <title>Nomad Discover</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="nomadDiscover.css">
     <style>
         .bg {
@@ -32,7 +32,7 @@
         <section class="start">
             <form class="drop-down">
                 <!-- continent -->
-                <select name="continent" id="continent">
+                <select name="continent" id="continent" required>
                     <option value="">Continent</option>
                     <option value="Asia">Asia</option>
                     <option value="Africa">Africa</option>
@@ -43,7 +43,7 @@
                 </select>
 
                 <!-- budget -->
-                <select name="budget" id="budget">
+                <select name="budget" id="budget" required>
                     <option value="">Budget</option>
                     <option value="1000">less than $1,000</option>
                     <option value="1500">$1,500</option>
@@ -54,7 +54,7 @@
                 </select>
 
                 <!-- weather -->
-                <select name="weather" id="weather">
+                <select name="weather" id="weather" required>
                     <option value="">Weather</option>
                     <option value="Warm">Warm</option>
                     <option value="Mild">Mild</option>
@@ -62,7 +62,7 @@
                 </select>
 
                 <!-- city size -->
-                <select name="size" id="size">
+                <select name="size" id="size" required>
                     <option value="">City size</option>
                     <option value="Big">Big</option>
                     <option value="Mid">Mid</option>
@@ -80,6 +80,7 @@
             </div>
         </div>
 
+        <script src='nomadDiscoverDatabase.js'></script>
         <script src='nomadDiscover.js'></script>
 
         <!-- footer -->
