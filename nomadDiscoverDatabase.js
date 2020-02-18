@@ -4,10 +4,8 @@ const europeWeather = "Cold";
 const northAmericaWeather = "Cold";
 const africaWeather = "Warm";
 
-//TODO: add photos
+//TODO: add photos(??)
 //TODO: fix north america and south america options
-//TODO: add any option, i.e. any continent, any size
-//TODO: add breaks: no input, no matches
 //TODO: Add about section
 //TODO: Add footer with github link and copyright
 
@@ -236,7 +234,7 @@ const options = [
   },
   //Istanbul
   {
-    continent: "Europe",
+    continent: "Asia",
     country: "Turkey",
     city: "Istanbul",
     weather: europeWeather,
@@ -336,7 +334,7 @@ const options = [
   },
   //Havana
   {
-    continent: "Europe",
+    continent: "South America",
     country: "Cuba",
     city: "Havana",
     weather: southAmericaWeather,
@@ -366,7 +364,7 @@ const options = [
   },
   //Casablanca
   {
-    continent: "Europe",
+    continent: "Africa",
     country: "Morocco",
     city: "Casablanca",
     weather: "Mild",
@@ -427,7 +425,7 @@ const options = [
   {
     continent: "Africa",
     country: "Morocco",
-    city: "Belgrade",
+    city: "Fes",
     weather: "Cold",
     budget: 1200,
     size: "Big",
@@ -568,7 +566,7 @@ const options = [
     continent: "Asia",
     country: "Turkey",
     city: "Izmir",
-    weather: europeWeather,
+    weather: "Cold",
     budget: 700,
     size: "Big",
     url: "https://nomadlist.com/izmir"
@@ -646,4 +644,4 @@ const options = [
   }
 ];
 
-export default options
+export default options;
