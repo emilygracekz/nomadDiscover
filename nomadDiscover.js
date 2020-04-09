@@ -1,5 +1,6 @@
 // JS modules (es6, see https://exploringjs.com/es6/ch_modules.html)
 import options from "./nomadDiscoverDatabase";
+// import options from './nomadDiscoverDatabase'
 //match input to database
 
 function matchInput() {
@@ -10,7 +11,7 @@ function matchInput() {
 
   // continent filter
   let continentsFiltered;
-  const continentFilter = entry => {
+  const continentFilter = (entry) => {
     return entry.continent === inputContinent;
   };
 
@@ -24,7 +25,7 @@ function matchInput() {
 
   //budget filter
   let budgetFiltered;
-  const budgetFilter = select => {
+  const budgetFilter = (select) => {
     return select.budget <= inputBudget;
   };
   const isBudgetAny = inputBudget === "Any";
@@ -37,20 +38,20 @@ function matchInput() {
 
   //weather filter
   let weatherFiltered;
-  const weatherFilter = pick => {
+  const weatherFilter = (pick) => {
     return pick.weather === inputWeather;
   };
   const isWeatherAny = inputWeather === "Any";
   if (isWeatherAny) {
     weatherFiltered = budgetFiltered;
   } else {
-  weatherFiltered = budgetFiltered.filter(weatherFilter);
-  console.log(weatherFiltered);
+    weatherFiltered = budgetFiltered.filter(weatherFilter);
+    console.log(weatherFiltered);
   }
 
   // size filter
   let sizeFiltered;
-  const sizeFilter = you => {
+  const sizeFilter = (you) => {
     return you.size === inputSize;
   };
   console.log(inputSize);
@@ -58,11 +59,10 @@ function matchInput() {
   if (isSizeAny) {
     sizeFiltered = weatherFiltered;
   } else {
-  sizeFiltered = weatherFiltered.filter(sizeFilter);
+    sizeFiltered = weatherFiltered.filter(sizeFilter);
   }
   console.log(sizeFiltered);
   return sizeFiltered;
-  
 } //end of matchInputFunction
 
 //grab modal parts
@@ -70,19 +70,17 @@ const modalOuter = document.querySelector(".modal-outer");
 const modalInner = document.querySelector(".modal-inner");
 
 //handle the submission, populate modal
-
 function onSubmit(e) {
   e.preventDefault();
   let finalList = matchInput();
-  if (finalList.length === 0) 
-  {
-  modalInner.innerHTML = `<p>Your input didn't match any cities! Maybe you should be less picky 😉</p>`;
+  if (finalList.length === 0) {
+    modalInner.innerHTML = `<p>Your input didn't match any cities! Maybe you should be less picky 😉</p>`;
 
-  //show modal
-  modalOuter.classList.add("open");
-  //reset the form
-  e.target.reset();
-  return;
+    //show modal
+    modalOuter.classList.add("open");
+    //reset the form
+    e.target.reset();
+    return;
   }
 
   e.preventDefault();
@@ -96,29 +94,22 @@ function onSubmit(e) {
   console.log(randomPlace);
 
   //populate the modal with new info
-  modalInner.innerHTML = `<p>You should go to ${randomPlace.city}, ${randomPlace.country}! Check it out on NomadList: ${randomPlace.url}</p>`;
+  modalInner.innerHTML = `<p>You should go to ${randomPlace.city}, ${randomPlace.country}! Check it out on <a href="${randomPlace.url}">NomadList</a></p>`;
 
   //show modal
   modalOuter.classList.add("open");
-}
 
-//close the model when clicked out or esc is pressed
+  //handle close modal
 function closeModal() {
-  modalOuter.classList.remove("open");
+modalOuter.classList.remove("open");
+}
+  window.addEventListener('click', closeModal);
 }
 
-modalOuter.addEventListener("click", function(event) {
-  const isOutside = !event.target.closest(".modal-inner");
-  if (isOutside) {
-    modalOuter.classList.remove("open");
-  }
-});
-
-window.addEventListener("keydown", event => {
+window.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeModal();
   }
 });
-//end of modals
 
 document.querySelector("form").addEventListener("submit", onSubmit);
