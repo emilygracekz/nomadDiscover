@@ -1,8 +1,6 @@
-// JS modules (es6, see https://exploringjs.com/es6/ch_modules.html)
 import options from "./nomadDiscoverDatabase";
-// import options from './nomadDiscoverDatabase'
-//match input to database
 
+//match input to database
 function matchInput() {
   let inputContinent = document.querySelector("#continent").value;
   let inputBudget = document.querySelector("#budget").value;
