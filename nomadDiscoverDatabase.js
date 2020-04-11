@@ -4,11 +4,6 @@ const europeWeather = "Cold";
 const northAmericaWeather = "Cold";
 const africaWeather = "Warm";
 
-//TODO: add photos(??)
-//TODO: fix north america and south america options
-//TODO: Add about section
-//TODO: Add footer with github link and copyright
-
 const options = [
   //Tenerife
   {
@@ -18,7 +13,7 @@ const options = [
     weather: europeWeather,
     budget: 2100,
     size: "Mid",
-    url: "https://nomadlist.com/tenerife"
+    url: "https://nomadlist.com/tenerife",
     // photo: xx;
   },
   //Valencia
@@ -29,7 +24,7 @@ const options = [
     weather: asiaWeather,
     budget: 2250,
     size: "Big",
-    url: "https://nomadlist.com/valencia"
+    url: "https://nomadlist.com/valencia",
   },
   //Seville
   {
@@ -39,7 +34,7 @@ const options = [
     weather: asiaWeather,
     budget: 2250,
     size: "Big",
-    url: "https://nomadlist.com/seville"
+    url: "https://nomadlist.com/seville",
   },
   //Lisbon
   {
@@ -49,7 +44,7 @@ const options = [
     weather: asiaWeather,
     budget: 1900,
     size: "Mid",
-    url: "https://nomadlist.com/lisbon"
+    url: "https://nomadlist.com/lisbon",
   },
   //Vilnius
   {
@@ -59,7 +54,7 @@ const options = [
     weather: europeWeather,
     budget: 1900,
     size: "Mid",
-    url: "https://nomadlist.com/vilnius"
+    url: "https://nomadlist.com/vilnius",
   },
   //Porto
   {
@@ -69,7 +64,7 @@ const options = [
     weather: southAmericaWeather,
     budget: 1800,
     size: "Mid",
-    url: "https://nomadlist.com/porto"
+    url: "https://nomadlist.com/porto",
   },
   //Budapest
   {
@@ -79,7 +74,7 @@ const options = [
     weather: europeWeather,
     budget: 1500,
     size: "Big",
-    url: "https://nomadlist.com/budapest"
+    url: "https://nomadlist.com/budapest",
   },
   //Sofia
   {
@@ -89,7 +84,7 @@ const options = [
     weather: "Cold",
     budget: 1200,
     size: "Big",
-    url: "https://nomadlist.com/sofia"
+    url: "https://nomadlist.com/sofia",
   },
   //Berlin
   {
@@ -99,7 +94,7 @@ const options = [
     weather: europeWeather,
     budget: 2800,
     size: "Big",
-    url: "https://nomadlist.com/berlin"
+    url: "https://nomadlist.com/berlin",
   },
   //Zagreb
   {
@@ -109,18 +104,17 @@ const options = [
     weather: europeWeather,
     budget: 1800,
     size: "Mid",
-    url: "https://nomadlist.com/zagreb"
+    url: "https://nomadlist.com/zagreb",
   },
   //Buenos Aires
   {
-    continent: "South America",
+    continent: "South-America",
     country: "Argentina",
     city: "Buenos Aires",
     weather: southAmericaWeather,
     budget: 1000,
     size: "Big",
-    url: "https://nomadlist.com/buenos-aires"
-
+    url: "https://nomadlist.com/buenos-aires",
   },
   //Ko Samui
   {
@@ -130,27 +124,27 @@ const options = [
     weather: asiaWeather,
     budget: 1400,
     size: "Small",
-    url: "https://nomadlist.com/ko-samui"
+    url: "https://nomadlist.com/ko-samui",
   },
   //Mexico City
   {
-    continent: "South America",
+    continent: "South-America",
     country: "Mexico",
     city: "Mexico City",
     weather: southAmericaWeather,
     budget: 1500,
     size: "Big",
-    url: "https://nomadlist.com/mexico-city"
+    url: "https://nomadlist.com/mexico-city",
   },
   //Medellín
   {
-    continent: "South America",
+    continent: "South-America",
     country: "Colombia",
     city: "Medellín",
     weather: southAmericaWeather,
     budget: 1000,
     size: "Big",
-    url: "https://nomadlist.com/medellin"
+    url: "https://nomadlist.com/medellin",
   },
   //Canggu, Bali
   {
@@ -160,17 +154,17 @@ const options = [
     weather: asiaWeather,
     budget: 1400,
     size: "Small",
-    url: "https://nomadlist.com/canggu"
+    url: "https://nomadlist.com/canggu",
   },
   //São Paulo
   {
-    continent: "South America",
+    continent: "South-America",
     country: "Brazil",
     city: "São Paulo",
     weather: southAmericaWeather,
     budget: 1600,
     size: "Big",
-    url: "https://nomadlist.com/sao-paulo"
+    url: "https://nomadlist.com/sao-paulo",
   },
   //Bangkok
   {
@@ -180,7 +174,7 @@ const options = [
     weather: asiaWeather,
     budget: 1500,
     size: "Big",
-    url: "https://nomadlist.com/bangkok"
+    url: "https://nomadlist.com/bangkok",
   },
   //Chaing Mai
   {
@@ -190,7 +184,7 @@ const options = [
     weather: asiaWeather,
     budget: 1100,
     size: "Mid",
-    url: "https://nomadlist.com/chiang-mai"
+    url: "https://nomadlist.com/chiang-mai",
   },
   //Da Nang
   {
@@ -200,7 +194,7 @@ const options = [
     weather: asiaWeather,
     budget: 1000,
     size: "Big",
-    url: "https://nomadlist.com/da-nang"
+    url: "https://nomadlist.com/da-nang",
   },
   //Tbilisi
   {
@@ -210,7 +204,7 @@ const options = [
     weather: europeWeather,
     budget: 1300,
     size: "Big",
-    url: "https://nomadlist.com/tbilisi"
+    url: "https://nomadlist.com/tbilisi",
   },
   //Phuket
   {
@@ -220,7 +214,7 @@ const options = [
     weather: asiaWeather,
     budget: 1700,
     size: "Mid",
-    url: "https://nomadlist.com/phuket"
+    url: "https://nomadlist.com/phuket",
   },
   //Prague
   {
@@ -230,7 +224,7 @@ const options = [
     weather: europeWeather,
     budget: 2000,
     size: "Big",
-    url: "https://nomadlist.com/prague"
+    url: "https://nomadlist.com/prague",
   },
   //Istanbul
   {
@@ -240,7 +234,7 @@ const options = [
     weather: europeWeather,
     budget: 1300,
     size: "Big",
-    url: "https://nomadlist.com/istanbul"
+    url: "https://nomadlist.com/istanbul",
   },
   //Cape Town
   {
@@ -250,17 +244,17 @@ const options = [
     weather: africaWeather,
     budget: 1800,
     size: "Mid",
-    url: "https://nomadlist.com/cape-town"
+    url: "https://nomadlist.com/cape-town",
   },
   //Playa del Carmen
   {
-    continent: "North America",
+    continent: "North-America",
     country: "Mexico",
     city: "Playa del Carmen",
     weather: southAmericaWeather,
     budget: 1500,
     size: "Mid",
-    url: "https://nomadlist.com/playa-del-carmen"
+    url: "https://nomadlist.com/playa-del-carmen",
   },
   //Taipei
   {
@@ -270,7 +264,7 @@ const options = [
     weather: asiaWeather,
     budget: 2000,
     size: "Big",
-    url: "https://nomadlist.com/taipei"
+    url: "https://nomadlist.com/taipei",
   },
   //Kiev
   {
@@ -280,7 +274,7 @@ const options = [
     weather: europeWeather,
     budget: 1800,
     size: "Big",
-    url: "https://nomadlist.com/kiev"
+    url: "https://nomadlist.com/kiev",
   },
   //Bucharest
   {
@@ -290,7 +284,7 @@ const options = [
     weather: europeWeather,
     budget: 1500,
     size: "Big",
-    url: "https://nomadlist.com/bucharest"
+    url: "https://nomadlist.com/bucharest",
   },
   //Belgrade
   {
@@ -300,7 +294,7 @@ const options = [
     weather: europeWeather,
     budget: 1400,
     size: "Big",
-    url: "https://nomadlist.com/belgrade"
+    url: "https://nomadlist.com/belgrade",
   },
   //Ko Tao
   {
@@ -310,7 +304,7 @@ const options = [
     weather: asiaWeather,
     budget: 1500,
     size: "Small",
-    url: "https://nomadlist.com/ko-tao"
+    url: "https://nomadlist.com/ko-tao",
   },
   //Saint Petersburg
   {
@@ -320,7 +314,7 @@ const options = [
     weather: europeWeather,
     budget: 1600,
     size: "Big",
-    url: "https://nomadlist.com/saint-petersburg"
+    url: "https://nomadlist.com/saint-petersburg",
   },
   //Odessa
   {
@@ -330,17 +324,17 @@ const options = [
     weather: europeWeather,
     budget: 1200,
     size: "Mid",
-    url: "https://nomadlist.com/odessa"
+    url: "https://nomadlist.com/odessa",
   },
   //Havana
   {
-    continent: "South America",
+    continent: "North-America",
     country: "Cuba",
     city: "Havana",
     weather: southAmericaWeather,
     budget: 1600,
     size: "Big",
-    url: "https://nomadlist.com/havana"
+    url: "https://nomadlist.com/havana",
   },
   //Ubud, Bali
   {
@@ -350,7 +344,7 @@ const options = [
     weather: asiaWeather,
     budget: 1800,
     size: "Mid",
-    url: "https://nomadlist.com/ubud"
+    url: "https://nomadlist.com/ubud",
   },
   //Moscow
   {
@@ -360,7 +354,7 @@ const options = [
     weather: europeWeather,
     budget: 2300,
     size: "Big",
-    url: "https://nomadlist.com/moscow"
+    url: "https://nomadlist.com/moscow",
   },
   //Casablanca
   {
@@ -370,7 +364,7 @@ const options = [
     weather: "Mild",
     budget: 1500,
     size: "Big",
-    url: "https://nomadlist.com/casablanca"
+    url: "https://nomadlist.com/casablanca",
   },
   //Dakar
   {
@@ -380,7 +374,7 @@ const options = [
     weather: africaWeather,
     budget: 1500,
     size: "Big",
-    url: "https://nomadlist.com/dakar"
+    url: "https://nomadlist.com/dakar",
   },
   //Bansko
   {
@@ -389,7 +383,7 @@ const options = [
     city: "Bansko",
     weather: europeWeather,
     budget: 1300,
-    size: "Small"
+    size: "Small",
   },
   //Luang Prabang
   {
@@ -399,17 +393,17 @@ const options = [
     weather: asiaWeather,
     budget: 1300,
     size: "Small",
-    url: "https://nomadlist.com/luang-prabang"
+    url: "https://nomadlist.com/luang-prabang",
   },
   //Santiago
   {
-    continent: "South America",
+    continent: "South-America",
     country: "Chile",
     city: "Santiago",
     weather: southAmericaWeather,
     budget: 1400,
     size: "Big",
-    url: "https://nomadlist.com/santiago"
+    url: "https://nomadlist.com/santiago",
   },
   //Da Lat
   {
@@ -419,7 +413,7 @@ const options = [
     weather: asiaWeather,
     budget: 1000,
     size: "Mid",
-    url: "https://nomadlist.com/da-lat"
+    url: "https://nomadlist.com/da-lat",
   },
   //Fes
   {
@@ -429,7 +423,7 @@ const options = [
     weather: "Cold",
     budget: 1200,
     size: "Big",
-    url: "https://nomadlist.com/fes"
+    url: "https://nomadlist.com/fes",
   },
   //Marrakesh
   {
@@ -439,7 +433,7 @@ const options = [
     weather: "Mild",
     budget: 1900,
     size: "Mid",
-    url: "https://nomadlist.com/marrakesh"
+    url: "https://nomadlist.com/marrakesh",
   },
   //Phnom Penh
   {
@@ -449,7 +443,7 @@ const options = [
     weather: asiaWeather,
     budget: 1200,
     size: "Big",
-    url: "https://nomadlist.com/phnom-penh"
+    url: "https://nomadlist.com/phnom-penh",
   },
   //Tunis
   {
@@ -459,7 +453,7 @@ const options = [
     weather: "Warm",
     budget: 1000,
     size: "Big",
-    url: "https://nomadlist.com/tunis"
+    url: "https://nomadlist.com/tunis",
   },
   //Siem Reap
   {
@@ -469,7 +463,7 @@ const options = [
     weather: asiaWeather,
     budget: 1000,
     size: "Mid",
-    url: "https://nomadlist.com/siem-reap"
+    url: "https://nomadlist.com/siem-reap",
   },
   //Mamaia
   {
@@ -479,17 +473,17 @@ const options = [
     weather: europeWeather,
     budget: 1400,
     size: "Mid",
-    url: "https://nomadlist.com/mamaia"
+    url: "https://nomadlist.com/mamaia",
   },
   //Montevideo
   {
-    continent: "South America",
+    continent: "South-America",
     country: "Uruguay",
     city: "Montevideo",
     weather: southAmericaWeather,
     budget: 1700,
     size: "Big",
-    url: "https://nomadlist.com/montevideo"
+    url: "https://nomadlist.com/montevideo",
   },
   //Hanoi
   {
@@ -499,7 +493,7 @@ const options = [
     weather: asiaWeather,
     budget: 1000,
     size: "Big",
-    url: "https://nomadlist.com/hanoi"
+    url: "https://nomadlist.com/hanoi",
   },
   //Tallinn
   {
@@ -509,7 +503,7 @@ const options = [
     weather: europeWeather,
     budget: 2000,
     size: "Mid",
-    url: "https://nomadlist.com/tallinn"
+    url: "https://nomadlist.com/tallinn",
   },
   //Antalya
   {
@@ -519,17 +513,17 @@ const options = [
     weather: "Mild",
     budget: 1100,
     size: "Big",
-    url: "https://nomadlist.com/antalya"
+    url: "https://nomadlist.com/antalya",
   },
   //La Paz
   {
-    continent: "North America",
+    continent: "North-America",
     country: "Mexico",
     city: "La Paz",
     weather: southAmericaWeather,
     budget: 1000,
     size: "Big",
-    url: "https://nomadlist.com/la-paz"
+    url: "https://nomadlist.com/la-paz",
   },
   //Male
   {
@@ -539,7 +533,7 @@ const options = [
     weather: asiaWeather,
     budget: 2000,
     size: "Mid",
-    url: "https://nomadlist.com/male"
+    url: "https://nomadlist.com/male",
   },
   //Cebu
   {
@@ -549,7 +543,7 @@ const options = [
     weather: asiaWeather,
     budget: 1400,
     size: "Mid",
-    url: "https://nomadlist.com/cebu"
+    url: "https://nomadlist.com/cebu",
   },
   //Palawan
   {
@@ -559,7 +553,7 @@ const options = [
     weather: asiaWeather,
     budget: 1400,
     size: "Mid",
-    url: "https://nomadlist.com/palawan"
+    url: "https://nomadlist.com/palawan",
   },
   //Izmir
   {
@@ -569,7 +563,7 @@ const options = [
     weather: "Cold",
     budget: 700,
     size: "Big",
-    url: "https://nomadlist.com/izmir"
+    url: "https://nomadlist.com/izmir",
   },
   //Split
   {
@@ -579,9 +573,9 @@ const options = [
     weather: "Mild",
     budget: 2500,
     size: "Mid",
-    url: "https://nomadlist.com/split"
+    url: "https://nomadlist.com/split",
   },
-  
+
   //Taghazout
   {
     continent: "Africa",
@@ -590,7 +584,7 @@ const options = [
     weather: "Mild",
     budget: 1100,
     size: "Mid",
-    url: "https://nomadlist.com/taghazout"
+    url: "https://nomadlist.com/taghazout",
   },
   //Warsaw
   {
@@ -600,7 +594,7 @@ const options = [
     weather: europeWeather,
     budget: 1900,
     size: "Big",
-    url: "https://nomadlist.com/warsaw"
+    url: "https://nomadlist.com/warsaw",
   },
   //Makati
   {
@@ -610,7 +604,7 @@ const options = [
     weather: asiaWeather,
     budget: 1800,
     size: "Mid",
-    url: "https://nomadlist.com/makati"
+    url: "https://nomadlist.com/makati",
   },
   //Koh Lanta
   {
@@ -620,7 +614,7 @@ const options = [
     weather: asiaWeather,
     budget: 1500,
     size: "Small",
-    url: "https://nomadlist.com/ko-lanta"
+    url: "https://nomadlist.com/ko-lanta",
   },
   //Kraków
   {
@@ -630,7 +624,7 @@ const options = [
     weather: europeWeather,
     budget: 1500,
     size: "Mid",
-    url: "https://nomadlist.com/krakow"
+    url: "https://nomadlist.com/krakow",
   },
   //Lviv
   {
@@ -640,7 +634,337 @@ const options = [
     weather: europeWeather,
     budget: 1100,
     size: "Mid",
-    url: "https://nomadlist.com/lviv"
+    url: "https://nomadlist.com/lviv",
+  },
+  //Auckland
+  {
+    continent: "Australia",
+    country: "New Zealand",
+    city: "Auckland",
+    weather: australiaWeather,
+    budget: 2900,
+    size: "Big",
+    url: "https://nomadlist.com/auckland",
+  },
+  //Sydney
+  {
+    continent: "Australia",
+    country: "Australia",
+    city: "Sydney",
+    weather: australiaWeather,
+    budget: 3200,
+    size: "Big",
+    url: "https://nomadlist.com/sydney",
+  },
+  //Melbourne
+  {
+    continent: "Australia",
+    country: "Australia",
+    city: "Sydney",
+    weather: australiaWeather,
+    budget: 2800,
+    size: "Big",
+    url: "https://nomadlist.com/melbourne",
+  },
+  //Toronto
+  {
+    continent: "North-America",
+    country: "Canada",
+    city: "Toronto",
+    weather: northAmericaWeather,
+    budget: 2900,
+    size: "Big",
+    url: "https://nomadlist.com/toronto",
+  },
+  //Montreal
+  {
+    continent: "North-America",
+    country: "Canada",
+    city: "Montreal",
+    weather: northAmericaWeather,
+    budget: 2500,
+    size: "Big",
+    url: "https://nomadlist.com/montreal",
+  },
+  //Vancouver
+  {
+    continent: "North-America",
+    country: "Canada",
+    city: "Vancouver",
+    weather: northAmericaWeather,
+    budget: 3300,
+    size: "Big",
+    url: "https://nomadlist.com/vancouver",
+  },
+  //Cologne
+  {
+    continent: "Europe",
+    country: "Germany",
+    city: "Cologne",
+    weather: europeWeather,
+    budget: 2500,
+    size: "Big",
+    url: "https://nomadlist.com/cologne",
+  },
+  //Frankfurt
+  {
+    continent: "Europe",
+    country: "Germany",
+    city: "Frankfurt",
+    weather: europeWeather,
+    budget: 2700,
+    size: "Big",
+    url: "https://nomadlist.com/frankfurt",
+  },
+  //Goa
+  {
+    continent: "Asia",
+    country: "India",
+    city: "Goa",
+    weather: asiaWeather,
+    budget: 1600,
+    size: "Big",
+    url: "https://nomadlist.com/goa",
+  },
+  //New York City
+  {
+    continent: "North-America",
+    country: "USA",
+    city: "New York City",
+    weather: northAmericaWeather,
+    budget: 5100,
+    size: "Big",
+    url: "https://nomadlist.com/new-york-city",
+  },
+  //Ottawa
+  {
+    continent: "North-America",
+    country: "Canada",
+    city: "Ottawa",
+    weather: northAmericaWeather,
+    budget: 2000,
+    size: "Mid",
+    url: "https://nomadlist.com/ottawa",
+  },
+  //Lake Balaton
+  {
+    continent: "Europe",
+    country: "Hungary",
+    city: "Lake Balaton",
+    weather: europeWeather,
+    budget: 1500,
+    size: "Mid",
+    url: "https://nomadlist.com/lake-balaton",
+  },
+  //London
+  {
+    continent: "Europe",
+    country: "UK",
+    city: "London",
+    weather: europeWeather,
+    budget: 4000,
+    size: "Big",
+    url: "https://nomadlist.com/london",
+  },
+  //Chicago
+  {
+    continent: "North-America",
+    country: "USA",
+    city: "Chicago",
+    weather: northAmericaWeather,
+    budget: 3600,
+    size: "Big",
+    url: "https://nomadlist.com/chicago",
+  },
+  //Riga
+  {
+    continent: "Europe",
+    country: "Latvia",
+    city: "Riga",
+    weather: europeWeather,
+    budget: 1800,
+    size: "Mid",
+    url: "https://nomadlist.com/riga",
+  },
+  //Paris
+  {
+    continent: "Europe",
+    country: "France",
+    city: "Paris",
+    weather: europeWeather,
+    budget: 4000,
+    size: "Big",
+    url: "https://nomadlist.com/paris",
+  },
+  //Seattle
+  {
+    continent: "North-America",
+    country: "USA",
+    city: "Seattle",
+    weather: northAmericaWeather,
+    budget: 4100,
+    size: "Big",
+    url: "https://nomadlist.com/seattle",
+  },
+  //Amsterdam
+  {
+    continent: "Europe",
+    country: "The Netherlands",
+    city: "Amsterdam",
+    weather: europeWeather,
+    budget: 5300,
+    size: "Big",
+    url: "https://nomadlist.com/amsterdam",
+  },
+  //Leipzig
+  {
+    continent: "Europe",
+    country: "Germany",
+    city: "Leipzig",
+    weather: europeWeather,
+    budget: 2300,
+    size: "Mid",
+    url: "https://nomadlist.com/leipzig",
+  },
+  //Toulouse
+  {
+    continent: "Europe",
+    country: "France",
+    city: "Toulouse",
+    weather: europeWeather,
+    budget: 2300,
+    size: "Mid",
+    url: "https://nomadlist.com/toulouse",
+  },
+  //Manila
+  {
+    continent: "Asia",
+    country: "Philippines",
+    city: "Manila",
+    weather: asiaWeather,
+    budget: 1500,
+    size: "Big",
+    url: "https://nomadlist.com/manila",
+  },
+  //Cusco
+  {
+    continent: "South-America",
+    country: "Peru",
+    city: "Cusco",
+    weather: southAmericaWeather,
+    budget: 1300,
+    size: "Mid",
+    url: "https://nomadlist.com/cusco",
+  },
+  //Edmonton
+  {
+    continent: "North-America",
+    country: "Canada",
+    city: "Edmonton",
+    weather: northAmericaWeather,
+    budget: 2000,
+    size: "Big",
+    url: "https://nomadlist.com/edmonton",
+  },
+  //Cork
+  {
+    continent: "Europe",
+    country: "Ireland",
+    city: "Cork",
+    weather: europeWeather,
+    budget: 3000,
+    size: "Small",
+    url: "https://nomadlist.com/cork",
+  },
+  //Dahab
+  {
+    continent: "Africa",
+    country: "Egypt",
+    city: "Dahab",
+    weather: africaWeather,
+    budget: 1000,
+    size: "Small",
+    url: "https://nomadlist.com/dahab",
+  },
+  //Chatham
+  {
+    continent: "North-America",
+    country: "Canada",
+    city: "Chatham",
+    weather: northAmericaWeather,
+    budget: 2000,
+    size: "Small",
+    url: "https://nomadlist.com/chatham",
+  },
+  //Brisbane
+  {
+    continent: "Australia",
+    country: "Australia",
+    city: "Brisbane",
+    weather: australiaWeather,
+    budget: 3000,
+    size: "Big",
+    url: "https://nomadlist.com/brisbane",
+  },
+  //Antwerp
+  {
+    continent: "Europe",
+    country: "Belgium",
+    city: "Antwerp",
+    weather: europeWeather,
+    budget: 3200,
+    size: "Mid",
+    url: "https://nomadlist.com/antwerp",
+  },
+  //Rome
+  {
+    continent: "Europe",
+    country: "Italy",
+    city: "Rome",
+    weather: europeWeather,
+    budget: 4000,
+    size: "Big",
+    url: "https://nomadlist.com/rome",
+  },
+  //Wellington
+  {
+    continent: "Australia",
+    country: "New Zealand",
+    city: "Wellington",
+    weather: australiaWeather,
+    budget: 2900,
+    size: "Mid",
+    url: "https://nomadlist.com/wellington",
+  },
+  //Granada
+  {
+    continent: "Europe",
+    country: "Spain",
+    city: "Granada",
+    weather: europeWeather,
+    budget: 2700,
+    size: "Big",
+    url: "https://nomadlist.com/granada",
+  },
+  //Banff
+  {
+    continent: "North-America",
+    country: "Canada",
+    city: "Banff",
+    weather: northAmericaWeather,
+    budget: 2500,
+    size: "Small",
+    url: "https://nomadlist.com/banff",
+  },
+  //Liberia
+  {
+    continent: "South-America",
+    country: "Costa Rica",
+    city: "Liberia",
+    weather: southAmericaWeather,
+    budget: 1300,
+    size: "Small",
+    url: "https://nomadlist.com/liberia",
   }
 ];
 
