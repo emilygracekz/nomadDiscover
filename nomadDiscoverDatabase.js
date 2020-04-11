@@ -3,6 +3,7 @@ const southAmericaWeather = "Warm";
 const europeWeather = "Cold";
 const northAmericaWeather = "Cold";
 const africaWeather = "Warm";
+const australiaWeather = "Warm";
 
 const options = [
   //Tenerife
