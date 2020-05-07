@@ -97,12 +97,16 @@ function onSubmit(e) {
   //show modal
   modalOuter.classList.add("open");
 
-  //handle close modal
+  
+}
+//handle close modal
 function closeModal() {
-modalOuter.classList.remove("open");
-}
-  window.addEventListener('click', closeModal);
-}
+  modalOuter.classList.remove("open");
+  }
+
+window.addEventListener('click', closeModal);
+window.addEventListener('touch', closeModal);
+
 
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {

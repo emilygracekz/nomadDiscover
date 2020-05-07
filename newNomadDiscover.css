@@ -60,7 +60,6 @@ p {
 .btn {
   font-family: "Montserrat", sans-serif;
   text-align: center;
-  /* padding: 10px 50px; */
   color: #fff;
   background-color: #5220dd;
   margin-right: auto;
@@ -69,7 +68,7 @@ p {
   font-weight: bold;
   letter-spacing: 2px;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
 }
 
 .btn:hover {
