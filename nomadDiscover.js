@@ -111,8 +111,8 @@ window.addEventListener('touch', closeModal);
 
 
 window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    closeModal();
+  if (event.key === "escape") {
+    closeModal;
   }
 });
 
