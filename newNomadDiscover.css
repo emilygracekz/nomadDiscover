@@ -206,7 +206,7 @@ h4 {
   .modal-inner {
     background-color: white;
     width: 300px;
-    height: 350px;
+    height: 300px;
     padding: 2rem;
     border-radius: 5px;
     min-height: 200px;
@@ -286,7 +286,7 @@ h4 {
   .modal-inner {
     background-color: white;
     width: 700px;
-    height: 700px;
+    height: 600px;
     padding: 2rem;
     border-radius: 5px;
     min-height: 200px;

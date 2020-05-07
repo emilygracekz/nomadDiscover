@@ -20,7 +20,6 @@ function matchInput() {
     continentsFiltered = options;
   } else {
     continentsFiltered = options.filter(continentFilter);
-    console.log(continentsFiltered);
   }
 
   //budget filter
@@ -33,7 +32,6 @@ function matchInput() {
     budgetFiltered = continentsFiltered;
   } else {
     budgetFiltered = continentsFiltered.filter(budgetFilter);
-    console.log(budgetFiltered);
   }
 
   //weather filter
@@ -46,7 +44,6 @@ function matchInput() {
     weatherFiltered = budgetFiltered;
   } else {
     weatherFiltered = budgetFiltered.filter(weatherFilter);
-    console.log(weatherFiltered);
   }
 
   // size filter
@@ -54,14 +51,12 @@ function matchInput() {
   const sizeFilter = (you) => {
     return you.size === inputSize;
   };
-  console.log(inputSize);
   const isSizeAny = inputSize === "Any";
   if (isSizeAny) {
     sizeFiltered = weatherFiltered;
   } else {
     sizeFiltered = weatherFiltered.filter(sizeFilter);
   }
-  console.log(sizeFiltered);
   return sizeFiltered;
 } //end of matchInputFunction
 
@@ -91,8 +86,8 @@ function onSubmit(e) {
   //pick a random city from the list
   let randomPlace = finalList[Math.floor(Math.random() * finalList.length)];
   JSON.stringify(randomPlace);
-  console.log(randomPlace);
 
+  
   //populate the modal with new info
   modalInner.innerHTML = `<p>You should go to ${randomPlace.city}, ${randomPlace.country}! Check it out on <a href="${randomPlace.url}">NomadList</a></p>`;
 
@@ -107,7 +102,6 @@ function closeModal() {
   }
 
 window.addEventListener('click', closeModal);
-window.addEventListener('touch', closeModal);
 
 
 window.addEventListener("keydown", (event) => {
@@ -115,8 +109,6 @@ window.addEventListener("keydown", (event) => {
     closeModal;
   }
 });
-
-document.querySelector("closeModalButton").addEventListener("click", closeModal);
 
 document.querySelector("form").addEventListener("submit", onSubmit);
 
