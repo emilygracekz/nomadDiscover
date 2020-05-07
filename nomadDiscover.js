@@ -1,5 +1,7 @@
 // import options from "./nomadDiscoverDatabase";
 
+const closeModalButton = document.querySelector('.closeModal');
+
 //match input to database
 function matchInput() {
   let inputContinent = document.querySelector("#continent").value;
@@ -113,6 +115,8 @@ window.addEventListener("keydown", (event) => {
     closeModal();
   }
 });
+
+document.querySelector("closeModalButton").addEventListener("click", closeModal);
 
 document.querySelector("form").addEventListener("submit", onSubmit);
 

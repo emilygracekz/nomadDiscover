@@ -216,6 +216,11 @@ h4 {
     display: flex;
   }
 
+  .closeModal {
+    padding: 5px 50px;
+    color: #e84d8a;
+  }
+
   p {
     font-size: 20px;
   }
@@ -286,7 +291,7 @@ h4 {
   .modal-inner {
     background-color: white;
     width: 700px;
-    height: 400px;
+    height: 700px;
     padding: 2rem;
     border-radius: 5px;
     min-height: 200px;
