@@ -216,11 +216,6 @@ h4 {
     display: flex;
   }
 
-  .closeModal {
-    padding: 5px 50px;
-    color: #e84d8a;
-  }
-
   p {
     font-size: 20px;
   }
