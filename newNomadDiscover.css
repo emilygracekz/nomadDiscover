@@ -68,7 +68,7 @@ p {
   font-weight: bold;
   letter-spacing: 2px;
   border: none;
-  border-radius: 6px;
+  border-radius: 50px;
 }
 
 .btn:hover {
@@ -286,7 +286,7 @@ h4 {
   .modal-inner {
     background-color: white;
     width: 700px;
-    height: 600px;
+    height: 500px;
     padding: 2rem;
     border-radius: 5px;
     min-height: 200px;

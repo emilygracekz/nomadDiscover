@@ -1,7 +1,7 @@
 const asiaWeather = "Warm";
 const southAmericaWeather = "Warm";
-const europeWeather = "Cold";
-const northAmericaWeather = "Cold";
+const europeWeather = "Mild";
+const northAmericaWeather = "Mild";
 const africaWeather = "Warm";
 const australiaWeather = "Warm";
 
