@@ -1,12 +1,13 @@
+const modalOuter = document.querySelector(".modal-outer");
+const modalInner = document.querySelector(".modal-inner");
 
-//match input to database
+
 function matchInput() {
   let inputContinent = document.querySelector("#continent").value;
   let inputBudget = document.querySelector("#budget").value;
   let inputWeather = document.querySelector("#weather").value;
   let inputSize = document.querySelector("#size").value;
 
-  // continent filter
   let continentsFiltered;
   const continentFilter = (entry) => {
     return entry.continent === inputContinent;
@@ -19,11 +20,11 @@ function matchInput() {
     continentsFiltered = options.filter(continentFilter);
   }
 
-  //budget filter
   let budgetFiltered;
   const budgetFilter = (select) => {
     return select.budget <= inputBudget;
   };
+  
   const isBudgetAny = inputBudget === "Any";
   if (isBudgetAny) {
     budgetFiltered = continentsFiltered;
@@ -31,11 +32,11 @@ function matchInput() {
     budgetFiltered = continentsFiltered.filter(budgetFilter);
   }
 
-  //weather filter
   let weatherFiltered;
   const weatherFilter = (pick) => {
     return pick.weather === inputWeather;
   };
+
   const isWeatherAny = inputWeather === "Any";
   if (isWeatherAny) {
     weatherFiltered = budgetFiltered;
@@ -43,11 +44,11 @@ function matchInput() {
     weatherFiltered = budgetFiltered.filter(weatherFilter);
   }
 
-  // size filter
   let sizeFiltered;
   const sizeFilter = (you) => {
     return you.size === inputSize;
   };
+
   const isSizeAny = inputSize === "Any";
   if (isSizeAny) {
     sizeFiltered = weatherFiltered;
@@ -55,42 +56,31 @@ function matchInput() {
     sizeFiltered = weatherFiltered.filter(sizeFilter);
   }
   return sizeFiltered;
-} //end of matchInputFunction
+} 
 
-//grab modal parts
-const modalOuter = document.querySelector(".modal-outer");
-const modalInner = document.querySelector(".modal-inner");
 
-//handle the submission, populate modal
 function onSubmit(e) {
   e.preventDefault();
   let finalList = matchInput();
   if (finalList.length === 0) {
     modalInner.innerHTML = `<p>Your input didn't match any cities! Maybe you should be less picky</p>`;
 
-    //show modal
     modalOuter.classList.add("open");
-    //reset the form
     e.target.reset();
     return;
   }
 
   e.preventDefault();
 
-  //reset the form
   e.target.reset();
 
-  //pick a random city from the list
   let randomPlace = finalList[Math.floor(Math.random() * finalList.length)];
   JSON.stringify(randomPlace);
 
-  //populate the modal with new info
   modalInner.innerHTML = `<p>You should go to ${randomPlace.city}, ${randomPlace.country}! Check it out on <a href="${randomPlace.url}">NomadList</a></p>`;
 
-  //show modal
   modalOuter.classList.add("open");
 }
-//handle close modal
 function closeModal() {
   modalOuter.classList.remove("open");
 }
@@ -108,10 +98,10 @@ document.querySelector("form").addEventListener("submit", onSubmit);
 
 const asiaWeather = "Warm";
 const southAmericaWeather = "Warm";
-const europeWeather = "Mild";
-const northAmericaWeather = "Mild";
+const europeWeather = "Warm";
+const northAmericaWeather = "Warm";
 const africaWeather = "Warm";
-const australiaWeather = "Warm";
+const australiaWeather = "Mild";
 
 const options = [
   //Tenerife

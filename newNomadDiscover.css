@@ -19,8 +19,6 @@ h1 {
 p {
   color: #2a2a2a;
   font-family: "Fredoka One", cursive;
-  /* font-family: Arial, Helvetica, sans-serif; */
-  /* letter-spacing: 1.5px; */
   text-align: center;
 }
 
@@ -314,10 +312,3 @@ h4 {
     height: 90px;
   }
 }
-
-/* screens bigger than 1280 px */
-/* @media screen and (min-width: 1280px) {
-
-  
-
-} */
